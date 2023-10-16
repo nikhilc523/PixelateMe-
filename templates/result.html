@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Blur Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2 class="swift-up-text">Thank you for using our site</h2>
+    <h1 data-value="PREVIEW" class="title">BLURRED</h1>
+    <div class="video-con">
+    <video class="video-preview" controls autoplay loop>
+      <source src="{{ url_for('download_blurred_video', filename=filename) }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+    <br>
+    <a href="{{ url_for('download_blurred_video', filename=filename) }}" class="btn">Download Blurred Video</a>
+  </div>
+  <script src="{{ url_for('static', filename='result.js') }}"></script>
+</body>
+</html>

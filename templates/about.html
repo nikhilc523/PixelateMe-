@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About us</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+
+<body>
+  <!-- -----------------------------------------------company---------------------------------------------------------------- -->
+  <div class="company">
+    
+    <div class="company-info">
+      <span>PIXELATE <span class="our">ME!!</span></span>
+      <div id="intr"><p>
+        <b>Introducing Pixelate Me: </b> Pixelate Me is a revolutionary web-based application designed to enhance privacy and protect identities by blurring faces in videos. With the increasing need for anonymity and data protection, our face blurring technology ensures that sensitive information remains hidden, allowing you to confidently share videos while maintaining privacy.
+      </p></div><br>
+      <div id="feat">
+      <p><b>Key Features:</b><br><b>User-Friendly Interface:</b> Pixelate Me offers a user-friendly interface that simplifies the face blurring process. With just a few clicks, you can upload your video and get your video processed.<br><b>Real-Time Preview:</b>Experience the power of Pixelate Me with our real-time preview feature. See the blurring effect applied to your video instantly, allowing you to make adjustments and achieve the desired level of face anonymity.
+      </p>
+    </div>
+    </div>
+  </div>
+  <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------team-------------------------------------------------------------- -->
+  <div class="team"><span>OUR TEAM</span></div>
+  <div class="container">
+    <div class="card">
+      <div class="card-image loading"><img src="../static/images/kaushal.png" alt="" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Kaushal<span class="yellow-surname"> Siriguppa</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Student</span> <br>
+            Pursuing Computer Science And Engineering<br>
+            Email: <a href="mailto:'ksiriguppa@gmail.com'">ksiriguppa@gmail.com</a>
+          </span>
+        </p>
+
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image loading"><img src="../static/images/nikhil.png" alt="" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Nikhil <span class="yellow-surname">Chowdary</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Student</span> <br>
+            Pursuing Computer Science And Engineering <br>
+            Email: <a href="mailto:'nikhilchowdary523@icloud.com'">nikhilchowdary523@icloud.com</a>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image loading"><img src="../static/images/aashish.jpg" alt="" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Aashish <span class="yellow-surname">Gopal</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Student</span> <br>
+            Pursuing Computer Science And Engineering
+             <br>
+            Email: <a href="mailto:'aashishnukala@gmail.com'">aashishnukala@gmail.com</a>
+          </span>
+        </p>
+
+      </div>
+    </div>
+   <div class="card">
+      <div class="card-image loading"><img src="../static/images/umesh.png" alt="" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Umesh <span class="yellow-surname">Chandra</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Student</span> <br>
+            Pursuing Computer Science And Engineering
+            <br>
+            Email: <a href="mailto:'mumeshchandra@gmail.com'">mumeshchandra@gmail.com</a>
+          </span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <script src="{{ url_for('static', filename='about.js') }}"></script>
+</body>
+</html>

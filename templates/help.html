@@ -1,0 +1,55 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='help.css') }}">
+<h1>Frequently Asked Questions</h1>
+<div class="faq-container">
+  <div class="faq">
+    <h3 class="faq-title">
+      How does the face blurring technology work?
+    </h3>
+    <p class="faq-text">Our face blurring technology uses advanced algorithms to detect and track human faces in videos. It automatically applies blurring techniques to these detected faces, ensuring privacy and anonymity.</p>
+    <button class="faq-toggle">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+
+  <div class="faq active">
+    <h3 class="faq-title">
+      Is there a limit to the number of faces that can be blurred in a video?    </h3>
+    <p class="faq-text">Our face blurring technology can handle multiple faces in a single video. There is no hard limit on the number of faces that can be detected and blurred.</p>
+    <button class="faq-toggle">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+
+  <div class="faq">
+    <h3 class="faq-title">
+      Is the face blurring performed in real-time?
+    </h3>
+    <p class="faq-text"> No,our solution supports post-processing, allowing you to blur faces in pre-recorded videos. </p>
+    <button class="faq-toggle">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+
+  <div class="faq">
+    <h3 class="faq-title">
+       What is the maximum file size limit for video uploads to be processed with the face blurring technology?
+    </h3>
+    <p class="faq-text">The maximum file size limit for video uploads to be processed with our face blurring technology is 200MB. Please ensure that your video files meet this size requirement for successful processing and blurring of faces.</p>
+    <button class="faq-toggle">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+
+  <div class="faq">
+    <h3 class="faq-title">
+      Will the face blurring affect the overall video quality?
+    </h3>
+    <p class="faq-text">Our face blurring technology is designed to preserve the overall video quality as much as possible while ensuring effective blurring of the faces. Using a Haar cascade classifier for face detection in videos typically does not directly impact the video quality. The Haar cascade classifier is a popular method for detecting objects, including faces, in images and videos. It works by analyzing patterns of pixel intensities and shapes within the video frames to identify objects.</p>
+    <button class="faq-toggle">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='help.js') }}"></script>

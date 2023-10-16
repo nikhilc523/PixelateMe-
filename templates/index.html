@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Pixelate Me</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.12.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="user-info">
+        {% if user_name %}
+          <div id="name"><span>Welcome, {{ user_name }}!</span></div>
+
+          <div id="log"> <img src="https://img.icons8.com/?size=512&id=59781&format=png"><a href="{{ url_for('logout') }}">  Logout</a></div>
+
+        {% else %}
+
+
+
+        {% endif %}
+      </div>
+    </div>
+  </header>
+  <main>
+  <div id="mysidebar" class="sidebar">
+    <ul class="sidebar-navlink">
+      <li>
+        <a href="{{ url_for('help') }}">
+          <i class="fa-solid fa-house"></i>
+          <span>Help</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('about') }}">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>About</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('download_history') }}">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span>Download History</span>
+        </a>
+      </li>
+    </ul>
+    <button onclick="toggleMneu()" id="toogleBtn" class="colleps-btn">
+      <img src="https://img.icons8.com/?size=2x&id=9149&format=png">
+    </button>
+  </div>
+  <section>
+    <div onclick="toggleDark()" class="toggle-dark-theme">
+      <button>
+        <div class="sun icon"></div>
+      </button>
+    </div>
+   <div id="panel">
+        <button id="he" onclick="showPanel()">
+            ?
+        </button>
+        </div>
+          <script>
+            
+            var count = 0;
+            function showPanel() {
+            var panel = document.getElementById("myPanel");
+            if(count == 1)
+            {
+                panel.classList.remove("show");
+                count = 0;
+            }
+            else
+            {
+            count = 1;
+            panel.classList.add("show");
+            }
+            }
+          </script>
+    <div class="content-page">
+      <div id="myPanel" class="panel">
+        <div id = "helper">
+        <b>How to use?</b><br>
+        Click on the choose files button.<br>
+        Click on the "upload" button to upload the video. <br>
+        The video will be uploaded and you will see a preview of it.<br>
+        Click on the "Process" button to start blurring the faces in the video.<br>
+        Once the processing is complete, you will see a new video with the faces blurred.<br>
+        Click on the "Download" button to download the blurred video.
+    </div>
+      </div>
+   
+      
+      
+      
+      <div class="container">
+        <div id="fuck">
+        <h1  style="color: #61876E;">Pixelate Me </h1>
+        
+          <div id="rotate">
+          <div class="square">
+            <svg xmlns="http://www.w3.org/2000/svg" width="400px" height="400px" viewBox="0 0 800 800">
+            <image xlink:href="https://www.svgrepo.com/show/311683/alien-monster.svg" x="0" y="0" width="200" height="200" />
+            </svg>
+            <path d="M12 10V13" stroke="#323232" stroke-width="2" stroke-linecap="round" />
+            <path d="M12 16V15.9888" stroke="#323232" stroke-width="2" stroke-linecap="round" />
+            <path d="M10.2518 5.147L3.6508 17.0287C2.91021 18.3618 3.87415 20 5.39912 20H18.6011C20.126 20 21.09 18.3618 20.3494 17.0287L13.7484 5.147C12.9864 3.77538 11.0138 3.77538 10.2518 5.147Z" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </div>
+          </div>
+        </div>
+    <div class="card">
+      <form class="upload-form" action="{{ url_for('process') }}" method="POST" enctype="multipart/form-data">
+        <label for="video-upload" class="upload-label">Choose Video</label>
+        <input id="video-upload" class="upload-input" type="file" name="video" accept="video/*">
+        <br>
+        <span class="upload-filename">No file selected</span>
+        <br>
+        <button id="upload-btn" class="upload-btn" type="submit">Process</button>
+      </form>
+      <video class="video-preview" controls></video>
+    </div>
+  </div>
+
+    </div>
+  </section>
+</main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.12.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
